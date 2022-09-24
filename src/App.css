@@ -4,10 +4,17 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(120deg, #000000 0%, #d6c2bc 100%);
+  background-image: url("https://images.unsplash.com/photo-1663882906920-9826d1b2ac48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 header {
   font-size: 2rem;
@@ -29,9 +36,10 @@ form button {
 }
 form button {
   color: #2a7220;
-  background: #f7fffe;
+  background: #bcdfb2;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 20px 0 20px 0;
 }
 form button:hover {
   background: #2a7220;
@@ -41,6 +49,16 @@ form button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 500px;
+  max-width: 1200px;
+  background: rgba(0, 0, 0, 0.54);
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.41);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  /* border: 1px solid rgba(0, 0, 0, 0.23); */
 }
 
 .todo-list {
@@ -49,7 +67,8 @@ form button:hover {
 }
 
 .todo-input {
-  background: #706a6a;
+  background: white;
+  border-radius: 20px 0px 20px 0px;
 }
 
 .todo {
@@ -57,6 +76,7 @@ form button:hover {
   background: white;
   font-size: 1.5rem;
   color: black;
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +84,8 @@ form button:hover {
 }
 .filter-todo {
   padding: 1rem;
-  background: #706a6a;
+  background: white;
+  border-radius: 20px 0 20px 0;
 }
 .todo li {
   flex: 1;
@@ -135,6 +156,7 @@ select {
   background: #2a7220;
   cursor: pointer;
   pointer-events: none;
+  border-radius: 20px 0 24px 0;
 }
 /* Transition */
 /*
