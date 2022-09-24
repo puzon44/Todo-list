@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function hello({ text, displayTodo, todos, setTodos }) {
+export default function hello({ text, displayTodo, todo, todos, setTodos }) {
   const deleteHandler = () => {
     setTodos(todos.filter((element) => element.id !== displayTodo.id));
   };
@@ -17,3 +17,5 @@ export default function hello({ text, displayTodo, todos, setTodos }) {
     </div>
   );
 }
+
+//

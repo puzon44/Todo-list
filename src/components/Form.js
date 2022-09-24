@@ -1,8 +1,15 @@
 import React from "react";
 
 export default function Form({ setinputText, todos, setTodos, inputText }) {
+  const [active, setActive] = React.useState(false);
+
   const inputTextHandler = (e) => {
     setinputText(e.target.value);
+    if (inputText.length !== "") {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
   };
 
   const submitTodoHandler = (e) => {
@@ -11,6 +18,7 @@ export default function Form({ setinputText, todos, setTodos, inputText }) {
       ...todos,
       { text: inputText, completed: false, id: Math.random() * 100 },
     ]);
+
     setinputText("");
   };
 
@@ -22,9 +30,16 @@ export default function Form({ setinputText, todos, setTodos, inputText }) {
         onChange={inputTextHandler}
         value={inputText}
       />
-      <button className="todo-button" type="submit" onClick={submitTodoHandler}>
-        <i className="fas fa-plus-square"></i>
-      </button>
+      {active && (
+        <button
+          className="todo-button"
+          type="submit"
+          onClick={submitTodoHandler}
+        >
+          <i className="fas fa-plus-square"></i>
+        </button>
+      )}
+
       <div className="select">
         <select name="todos" className="filter-todo">
           <option value="all">All</option>
