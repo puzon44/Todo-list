@@ -5,7 +5,7 @@ export default function Form({ setinputText, todos, setTodos, inputText }) {
 
   const inputTextHandler = (e) => {
     setinputText(e.target.value);
-    if (inputText.length !== "") {
+    if (inputText !== "") {
       setActive(true);
     } else {
       setActive(false);

@@ -12,7 +12,6 @@ function App() {
   return (
     <div className="App">
       <header>God's Todo List </header>
-
       <Form
         setinputText={setinputText}
         todos={todos}
